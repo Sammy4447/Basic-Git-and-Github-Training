@@ -30,6 +30,32 @@ This training is split into 7 labs, each in its own file.
 | Lab 7 | Inspection & Utilities (Step 28) | [Lab7-Inspection-Utilities.md](Lab7-Inspection-Utilities.md) |
 
 Each lab README contains the exact terminal commands and VSCode actions needed to complete its steps.
+## .gitignore
+.gitignore is a file that tells Git which files or folders not to track or upload to GitHub.
+
+Think of it as a “Do Not Upload” list.
+
+Example:
+node_modules/
+.env
+*.log
+dist/
+
+Why use it ?
+
+🔒 Protect secrets: .env may contain API keys and passwords.
+📦 Avoid unnecessary files: node_modules/ can contain thousands of dependency files.
+🧹 Keep the repository clean: Ignore logs, build files, and temporary files.
+
+Example project:
+project/
+├── index.js       ✅ tracked
+├── package.json   ✅ tracked
+├── .env           ❌ ignored
+├── node_modules/  ❌ ignored
+└── error.log      ❌ ignored
+
+Important : .gitignore only prevents untracked files from being added. It does not automatically stop tracking a file that was already committed
 
 ## Contributing
 
