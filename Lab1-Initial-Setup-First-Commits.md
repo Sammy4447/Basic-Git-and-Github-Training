@@ -1,7 +1,7 @@
 # Lab 1 — Initial Setup & First Commits
 
 [← Back to index](README.md)
-
+hello i am nirjal
 ## Definitions
 
 - Repository: A project folder tracked by Git.
