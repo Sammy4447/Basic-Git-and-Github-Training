@@ -10,6 +10,7 @@
 - **Staging area:** The changes you've marked to go into the next commit.
 - **Branch:** A separate line of development within the repository.
 - **Remote:** A copy of the repository hosted elsewhere, usually on GitHub.
+- **`.gitignore`:** A file listing what Git should never track (build output, secrets, OS clutter).
 
 ## Step 1 — Configure Git (One Time Only)
 
@@ -24,6 +25,8 @@ git config --global user.email "you@email.com"
 git config --global init.defaultBranch main
 git config --list
 ```
+
+> **Tip:** Run `git config --global core.editor "code --wait"` if you want VSCode to open for commit messages instead of Vim.
 
 ## Step 2 — Create Project & Initialize
 
@@ -134,6 +137,25 @@ git log --oneline --graph --all
 ```
 
 > **Checkpoint:** `git log --oneline` should show three commits and `git status` should report a clean working tree. If not, re-run Steps 4–6.
+
+## Step 8 — Inspect a Single Commit
+
+> **Use it when:** you want to see exactly what changed in one commit without scrolling through the whole log.
+
+Terminal:
+
+```bash
+git show HEAD
+git show HEAD~1
+```
+
+> `HEAD` is the most recent commit; `HEAD~1` is one before that, `HEAD~2` two before, and so on.
+
+## Troubleshooting
+
+- **`fatal: not a git repository`** — you're not inside `my-project`, or you skipped `git init`. Run `cd my-project` then check with `git status`.
+- **Commit shows author `unknown`** — Step 1 wasn't completed for this machine; set `user.name`/`user.email` and try again.
+- **`nothing to commit, working tree clean`** — you forgot to save the file in VSCode before running `git add`.
 
 ---
 Next: [Lab 2 — Undoing Changes](Lab2-Undoing-Changes.md)
