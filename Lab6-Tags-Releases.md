@@ -43,4 +43,10 @@ git push origin --delete v1.0.0        # delete from GitHub
 ```
 
 ---
+git show v1.0.0                    # view tag details and the commit it points to
+
+git tag -a v1.1.0 -m "second release"  # create the next version tag
+
+git push origin v1.1.0             # push the new tag to GitHub
+
 Next: [Lab 7 — Inspection & Utilities](Lab7-Inspection-Utilities.md)
