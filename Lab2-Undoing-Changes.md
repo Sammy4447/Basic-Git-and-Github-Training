@@ -1,7 +1,7 @@
 # Lab 2 — Undoing Changes
 
 [← Back to index](README.md)
-
+i am ronik
 Git has four different "undo" commands and picking the wrong one is how people lose work. Use this table to choose:
 
 | Your situation | Command | What survives |
