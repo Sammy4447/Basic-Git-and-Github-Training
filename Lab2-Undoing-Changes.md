@@ -3,7 +3,7 @@
 [← Back to index](README.md)
 
 Git has four different "undo" commands and picking the wrong one is how people lose work. Use this table to choose:
-
+learning pull request
 | Your situation | Command | What survives |
 |---|---|---|
 | Edited a file, not committed yet, want the old version back | `git restore <file>` | Your edits are **gone** |
