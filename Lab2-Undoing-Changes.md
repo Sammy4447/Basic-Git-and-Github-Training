@@ -120,6 +120,7 @@ git log --oneline             # commit removed ✅
 ```
 
 Open `hello.txt` in VSCode — the line is completely gone ✅
+this is a pull request?
 
 ---
 Next: [Lab 3 — GitHub Basics](Lab3-GitHub-Basics.md)
