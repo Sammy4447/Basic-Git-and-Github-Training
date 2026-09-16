@@ -4,12 +4,12 @@
 
 ## Definitions
 
-- Repository: A project folder tracked by Git.
-- Commit: A saved snapshot of your project.
-- Working directory: The files currently on your machine.
-- Staging area: The prepared changes before a commit.
-- Branch: A separate line of development.
-- Remote: The GitHub version of the repository.
+- **Repository:** A project folder whose history is tracked by Git.
+- **Commit:** A saved snapshot of your project at a point in time.
+- **Working directory:** The files as they currently exist on your machine.
+- **Staging area:** The changes you've marked to go into the next commit.
+- **Branch:** A separate line of development within the repository.
+- **Remote:** A copy of the repository hosted elsewhere, usually on GitHub.
 
 ## Step 1 — Configure Git (One Time Only)
 
@@ -21,6 +21,7 @@ Terminal:
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@email.com"
+git config --global init.defaultBranch main
 git config --list
 ```
 
@@ -68,8 +69,8 @@ Terminal:
 
 ```bash
 git status
-git add .
-git commit -m "first commit"
+git add hello.txt
+git commit -m "Add hello.txt with greeting"
 ```
 
 ## Step 5 — Second Commit
@@ -89,8 +90,9 @@ Terminal:
 
 ```bash
 git status
+git diff
 git add .
-git commit -m "second commit"
+git commit -m "Add learning note to hello.txt"
 ```
 
 ## Step 6 — Third Commit
@@ -112,7 +114,7 @@ Terminal:
 ```bash
 git status
 git add .
-git commit -m "third commit"
+git commit -m "Describe Git in hello.txt"
 ```
 
 ## Step 7 — View History
@@ -130,6 +132,8 @@ git log
 git log --oneline
 git log --oneline --graph --all
 ```
+
+> **Checkpoint:** `git log --oneline` should show three commits and `git status` should report a clean working tree. If not, re-run Steps 4–6.
 
 ---
 Next: [Lab 2 — Undoing Changes](Lab2-Undoing-Changes.md)
