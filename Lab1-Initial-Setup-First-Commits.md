@@ -114,7 +114,7 @@ git status
 git add .
 git commit -m "third commit"
 ```
-
+i anm learning pull request
 ## Step 7 — View History
 
 > **Use it when:** you want to know what happened in this project — who changed what, when, and in what order. Also how you find a commit hash to use with `revert`, `cherry-pick`, or `show`.
