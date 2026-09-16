@@ -10,6 +10,6 @@ This training is split into 7 labs, each in its own README file. Work through th
 | Lab 4 | Branching & Merging (Steps 16–21) | [Lab4-Branching-Merging.md](Lab4-Branching-Merging.md) |
 | Lab 5 | Advanced Commands (Steps 22–24) | [Lab5-Advanced-Commands.md](Lab5-Advanced-Commands.md) |
 | Lab 6 | Tags & Releases (Steps 25–27) | [Lab6-Tags-Releases.md](Lab6-Tags-Releases.md) |
-| Lab 7 | Inspection & Utilities (Step 28) | [Lab7-Inspection-Utilities.md](Lab7-Inspection-Utilities.md) |
+
 
 Each lab README contains the exact terminal commands and VSCode actions needed to complete its steps.
