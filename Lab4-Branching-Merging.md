@@ -40,21 +40,24 @@ git commit -m "add login page"
 
 > **Use it when:** the feature is finished and tested, and you want it in `main` for everyone.
 > **Order matters:** always `git checkout` the branch you want to merge *into* first (here, `main`), then `git merge <the-other-branch>`. Doing it backwards merges main into your feature instead.
+> **Before switching:** if there are uncommitted edits sitting in your working tree, Git can refuse the checkout — a quick `git status` first saves the confusion.
 > **On a team:** you'd usually push the branch and open a Pull Request on GitHub rather than merging locally — same idea, but with review.
 
 Terminal:
 
 ```bash
+git status                      # confirm nothing uncommitted is lying around
 git checkout main
-ls                              # login.txt not here
+ls                               # login.txt not here
 git merge feature/login
-ls                              # login.txt is here now ✅
+ls                               # login.txt is here now ✅
 git log --oneline --graph --all
 ```
 
 ## Step 19 — Create a Merge Conflict
 
 > **Why practise this:** a conflict happens whenever two branches changed the *same lines* of the *same file*. It is normal, not a bug or a mistake — every developer hits it. Better to meet it here, on a throwaway file, than the first time on real work.
+> Here that overlap is deliberate — both branches below rewrite line 1 of `hello.txt`, which is exactly what forces Git to ask you to choose.
 
 Terminal:
 
@@ -103,6 +106,7 @@ git merge feature/conflict          # conflict will appear
 > **Use it when:** a merge or pull stops with "CONFLICT" and Git asks you to decide. Git can't know which version is right, so it puts both in the file and hands it to you.
 > **How to read the markers:** everything between `<<<<<<< HEAD` and `=======` is *your current branch*; between `=======` and `>>>>>>>` is *the branch coming in*. Keep one, keep the other, or write a combination — then delete all three marker lines, save, `git add`, `git commit`.
 > **VSCode shortcut:** it shows "Accept Current / Accept Incoming / Accept Both" buttons above the conflict — clicking those does the same thing.
+> **Before committing:** run `git diff` to see exactly what you're about to lock in — a cheap way to catch a resolution you didn't actually mean to make.
 > **Panicking?** `git merge --abort` puts everything back the way it was before the merge.
 
 In VSCode — open `hello.txt`, you will see:
@@ -128,6 +132,7 @@ Save — `Ctrl + S`
 Terminal:
 
 ```bash
+git diff                            # review the resolution before staging
 git add .
 git commit -m "conflict resolved"
 git log --oneline --graph --all
@@ -137,6 +142,7 @@ git log --oneline --graph --all
 
 > **Use it when:** the branch is merged and you're done with it. Old branches pile up fast and make `git branch` unreadable.
 > **Safe vs forced:** `-d` refuses to delete a branch that hasn't been merged — that refusal is a safety net protecting unmerged work. `-D` forces it, so only use `-D` when you're sure you want to throw that work away.
+> **If `-d` pushes back:** you'll get something like `error: branch not fully merged`. Treat that as Git checking in with you, not a bug — only override it with `-D` once you're certain.
 
 Terminal:
 
@@ -174,6 +180,8 @@ git switch feature/profile
 ```
 
 > **Remember:** `git checkout -b feature/login` and `git switch -c feature/login` both create and switch to a new branch, but `git switch` is clearer because it is specifically designed for branch switching.
+
+> **One more shortcut:** `git switch -` hops back to whichever branch you were just on, the same way `cd -` works in the shell.
 
 > **Tip:** Run `git status` before switching if you have uncommitted changes, so you know what work is currently in your working tree.
 
