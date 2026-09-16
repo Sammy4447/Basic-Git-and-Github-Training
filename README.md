@@ -34,4 +34,4 @@ Each lab README contains the exact terminal commands and VSCode actions needed t
 ## Contributing
 
 Found a typo or a step that doesn't work as written? Open an issue or a pull request — this is a training resource, and corrections make it better for the next learner.
-Thank You !
+Thank You !!
