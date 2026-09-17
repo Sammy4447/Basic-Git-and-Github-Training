@@ -71,6 +71,6 @@ Found a typo or a step that doesn't work as written? Contributions are welcome â
 
 Small, focused pull requests are easier to review and merge â€” one fix or one addition per PR.
 
-Have Fun Learning
-
+Have Fun Learning 
+This may be fun after graduation !
 Thank You ! 
