@@ -42,6 +42,47 @@ git blame hello.txt                 # who wrote which line
 git shortlog -sn                    # commits count per author
 ```
 
+### Pro Tip — Read History Like a Detective
+
+1. **Blame → Show combo:** `git blame` tells you which commit introduced a line, but not *why*. Always follow up with `git show`:
+
+   ```bash
+   git blame hello.txt        # copy the short hash from the line you care about
+   git show <hash>            # read the full commit message + diff for context
+   ```
+
+2. **Smarter diffs for reviews:**
+
+   ```bash
+   git diff --word-diff       # highlight changed words, not whole lines — great for docs
+   git diff --check           # catch trailing whitespace before you commit
+   git diff --stat HEAD~3     # how much changed in the last 3 commits?
+   ```
+
+3. **Smarter log / blame:**
+
+   ```bash
+   git log -p --follow hello.txt   # full patch history of one file, even across renames
+   git blame -L 10,20 hello.txt    # blame only lines 10-20, ignore noise
+   git shortlog -sne               # add -e to see names + emails for contact
+   ```
+
+### 2-Minute Practice
+
+```bash
+# 1. Pick a line you didn't write
+git blame hello.txt
+
+# 2. Understand it
+git show <hash-from-blame>
+
+# 3. Summarize the repo
+git log --oneline --decorate --graph -5
+git shortlog -sn
+```
+
+> **Rule of thumb:** `status` for now, `diff` for uncommitted work, `show` / `log` / `blame` / `shortlog` for history and people. If you're about to change code, inspect first.
+
 ---
 
 [← Back to index](README.md)
