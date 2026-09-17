@@ -1,9 +1,9 @@
 # Git & GitHub — Complete Step by Step (VSCode + Terminal)
 
-![Last Commit](https://img.shields.io/github/last-commit/pr4shxnt/Basic-Git-and-Github-Training)
-![Repo Size](https://img.shields.io/github/repo-size/pr4shxnt/Basic-Git-and-Github-Training)
-![Issues](https://img.shields.io/github/issues/pr4shxnt/Basic-Git-and-Github-Training)
-![Stars](https://img.shields.io/github/stars/pr4shxnt/Basic-Git-and-Github-Training?style=flat)
+![Last Commit](https://img.shields.io/github/last-commit/Sammy4447/Basic-Git-and-Github-Training)
+![Repo Size](https://img.shields.io/github/repo-size/Sammy4447/Basic-Git-and-Github-Training)
+![Issues](https://img.shields.io/github/issues/Sammy4447/Basic-Git-and-Github-Training)
+![Stars](https://img.shields.io/github/stars/Sammy4447/Basic-Git-and-Github-Training?style=flat)
 ![Made with Markdown](https://img.shields.io/badge/made%20with-Markdown-1f425f.svg)
 
 A hands-on, step-by-step training for learning Git and GitHub using VSCode and the terminal side by side. No prior Git experience required — just follow the labs in order.
@@ -30,7 +30,7 @@ Before starting, make sure you have:
 
 ## Labs
 
-This training is split into 7 labs, each in its own file.
+This training is split into 8 labs, each in its own file.
 
 | Lab | Topic | File |
 |---|---|---|
@@ -41,8 +41,9 @@ This training is split into 7 labs, each in its own file.
 | Lab 5 | Advanced Commands (Steps 22–24) | [Lab5-Advanced-Commands.md](Lab5-Advanced-Commands.md) |
 | Lab 6 | Tags & Releases (Steps 25–27) | [Lab6-Tags-Releases.md](Lab6-Tags-Releases.md) |
 | Lab 7 | Inspection & Utilities (Step 28) | [Lab7-Inspection-Utilities.md](Lab7-Inspection-Utilities.md) |
+| Lab 8 | Everyday Workflow & Troubleshooting (Steps 29–32) | [Lab8-Daily-Workflow-Troubleshooting.md](Lab8-Daily-Workflow-Troubleshooting.md) |
 
-Each lab README contains the exact terminal commands and VSCode actions needed to complete its steps.
+Each lab file contains the exact terminal commands and VSCode actions needed to complete its steps.
 
 ## Contributing
 
