@@ -102,6 +102,30 @@ git merge feature/rebase-demo       # fast forward, clean history
 git log --oneline --graph           # linear, no merge commit ✅
 ```
 
+### Interactive Rebase & Squashing Commits (`git rebase -i`)
+
+> **Use it when:** you have made multiple small "work-in-progress" or typo commits on your feature branch and want to combine ("squash") them into one clean, well-formatted commit before submitting a Pull Request.
+
+```bash
+# Combine the last 3 commits on your branch into a single commit
+git rebase -i HEAD~3
+```
+
+An editor will open showing your commits:
+```
+pick a1b2c3d docs: add initial draft
+pick e4f5g6h docs: fix typo in draft
+pick i7j8k9l docs: refine section
+```
+Change `pick` to `squash` (or `s`) for commits you want to merge into the top commit:
+```
+pick a1b2c3d docs: add comprehensive section
+squash e4f5g6h docs: fix typo in draft
+squash i7j8k9l docs: refine section
+```
+Save and close — Git will prompt you to write a single combined commit message. ✅
+
+
 ### Merge vs Rebase — what actually happens to the commits
 
 > **The situation:** two branches started from the same commit and then both moved on. Merge and rebase are the two ways to bring them back together — and they do very different things to your history.

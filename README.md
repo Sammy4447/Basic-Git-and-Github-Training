@@ -28,47 +28,28 @@ Before starting, make sure you have:
 3. Type the terminal commands yourself instead of copy-pasting; muscle memory is the point.
 4. Use the "Back to index" link at the bottom of each lab to return here.
 
-## Labs
+## Labs & Guides
 
-This training is split into 7 labs, each in its own file.
+This training is split into 7 hands-on labs and interactive guides:
 
-| Lab | Topic | File |
+| Lab / Guide | Topic | File |
 |---|---|---|
 | Lab 1 | Initial Setup & First Commits (Steps 1–7) | [Lab1-Initial-Setup-First-Commits.md](Lab1-Initial-Setup-First-Commits.md) |
 | Lab 2 | Undoing Changes (Steps 8–11) | [Lab2-Undoing-Changes.md](Lab2-Undoing-Changes.md) |
-| Lab 3 | GitHub Basics (Steps 12–15) | [Lab3-GitHub-Basics.md](Lab3-GitHub-Basics.md) |
+| Lab 3 | GitHub Basics & Fetch vs Pull (Steps 12–15) | [Lab3-GitHub-Basics.md](Lab3-GitHub-Basics.md) |
 | Lab 4 | Branching & Merging (Steps 16–21) | [Lab4-Branching-Merging.md](Lab4-Branching-Merging.md) |
 | Lab 5 | Advanced Commands (Steps 22–24) | [Lab5-Advanced-Commands.md](Lab5-Advanced-Commands.md) |
 | Lab 6 | Tags & Releases (Steps 25–27) | [Lab6-Tags-Releases.md](Lab6-Tags-Releases.md) |
 | Lab 7 | Inspection & Utilities (Step 28) | [Lab7-Inspection-Utilities.md](Lab7-Inspection-Utilities.md) |
+| **Guide** | **How to Create a Pull Request (PR)** | [GitForkGuide.md](GitForkGuide.md) |
+| **Guide** | **Contribution Guidelines** | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 Each lab README contains the exact terminal commands and VSCode actions needed to complete its steps.
 
 ## Contributing
 
-Found a typo or a step that doesn't work as written? Contributions are welcome — and going through the flow below is itself good practice for everything taught in these labs.
+Found a typo or a step that doesn't work as written? Contributions are welcome!
 
-1. **Fork** this repo (button, top right of the GitHub page).
-2. **Clone** your fork locally:
-   ```bash
-   git clone https://github.com/<your-username>/Basic-Git-and-Github-Training.git
-   cd Basic-Git-and-Github-Training
-   ```
-3. **Create a branch** for your change:
-   ```bash
-   git checkout -b fix/short-description
-   ```
-4. Make your edits, then **stage and commit**:
-   ```bash
-   git add .
-   git commit -m "docs: describe your change here"
-   ```
-5. **Push** the branch to your fork:
-   ```bash
-   git push origin fix/short-description
-   ```
-6. Open a **pull request** from your branch into this repo's `main` branch, with a short description of what you changed and why.
-
-Small, focused pull requests are easier to review and merge — one fix or one addition per PR.
+Please read our [Contribution Guidelines](CONTRIBUTING.md) and check out the step-by-step [PR Guide](GitForkGuide.md) to practice making open-source contributions.
 
 Thank You !

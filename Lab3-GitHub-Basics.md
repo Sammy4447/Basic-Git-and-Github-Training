@@ -80,6 +80,20 @@ git pull origin main
 
 Open `hello.txt` in VSCode — teammate's line is now here ✅
 
+### `git fetch` vs `git pull`
+
+> **What's the difference?**
+> - **`git fetch`**: Downloads new commits, branches, and tags from the remote repo **without** modifying your working directory or current branch. It updates remote-tracking branches like `origin/main`.
+> - **`git pull`**: Performs a `git fetch` **AND** immediately runs `git merge` to integrate the remote changes into your active branch (`git pull = git fetch + git merge`).
+
+```bash
+# Safe check to see what remote changes exist without merging yet:
+git fetch origin
+git status          # Tells you how many commits your branch is behind origin/main
+git log HEAD..origin/main --oneline  # View incoming commits before merging
+```
+
+
 ## SSH Authentication Setup for GitHub
 
 > **Use it when:** every push and pull is asking you for a username and password/token and you're tired of it, or you're setting up a machine you'll use regularly. One-time setup per machine.
@@ -196,4 +210,4 @@ git remote -v
 Now `git push` / `git pull` will use SSH — no more username/password prompts ✅
 
 ---
-Next: [Lab 4 — Branching & Merging](Lab4-Branching-Merging.md)h
+Next: [Lab 4 — Branching & Merging](Lab4-Branching-Merging.md)
