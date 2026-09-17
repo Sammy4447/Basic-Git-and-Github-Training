@@ -4,6 +4,7 @@
 
 ## Step 16 — Create a Branch
 
+> _“Creating a branch is just opening a new timeline in the multiverse.”_
 > **Use it when:** you're about to start a new feature, a bug fix, or an experiment and you don't want half-finished work sitting on `main`. A branch is a private lane — you can commit freely, and `main` stays working the whole time.
 > **Naming:** teams usually use `feature/...`, `bugfix/...`, `hotfix/...` so the branch name says what it's for.
 
@@ -39,7 +40,7 @@ git commit -m "add login page"
 ## Step 18 — Merge Branch into Main
 
 > **Use it when:** the feature is finished and tested, and you want it in `main` for everyone.
-> **Order matters:** always `git checkout` the branch you want to merge *into* first (here, `main`), then `git merge <the-other-branch>`. Doing it backwards merges main into your feature instead.
+> **Order matters:** always `git checkout` the branch you want to merge _into_ first (here, `main`), then `git merge <the-other-branch>`. Doing it backwards merges main into your feature instead.
 > **On a team:** you'd usually push the branch and open a Pull Request on GitHub rather than merging locally — same idea, but with review.
 
 Terminal:
@@ -54,7 +55,7 @@ git log --oneline --graph --all
 
 ## Step 19 — Create a Merge Conflict
 
-> **Why practise this:** a conflict happens whenever two branches changed the *same lines* of the *same file*. It is normal, not a bug or a mistake — every developer hits it. Better to meet it here, on a throwaway file, than the first time on real work.
+> **Why practise this:** a conflict happens whenever two branches changed the _same lines_ of the _same file_. It is normal, not a bug or a mistake — every developer hits it. Better to meet it here, on a throwaway file, than the first time on real work.
 
 Terminal:
 
@@ -101,7 +102,7 @@ git merge feature/conflict          # conflict will appear
 ## Step 20 — Resolve the Conflict
 
 > **Use it when:** a merge or pull stops with "CONFLICT" and Git asks you to decide. Git can't know which version is right, so it puts both in the file and hands it to you.
-> **How to read the markers:** everything between `<<<<<<< HEAD` and `=======` is *your current branch*; between `=======` and `>>>>>>>` is *the branch coming in*. Keep one, keep the other, or write a combination — then delete all three marker lines, save, `git add`, `git commit`.
+> **How to read the markers:** everything between `<<<<<<< HEAD` and `=======` is _your current branch_; between `=======` and `>>>>>>>` is _the branch coming in_. Keep one, keep the other, or write a combination — then delete all three marker lines, save, `git add`, `git commit`.
 > **VSCode shortcut:** it shows "Accept Current / Accept Incoming / Accept Both" buttons above the conflict — clicking those does the same thing.
 > **Panicking?** `git merge --abort` puts everything back the way it was before the merge.
 
@@ -146,7 +147,6 @@ git branch -d feature/conflict      # safe delete
 git branch                          # confirm deleted ✅
 ```
 
-
 ## Bonus command — Switch Between Branches with `git switch`
 
 > **Use it when:** you want to move between branches. `git switch` is the modern, branch-focused alternative to using `git checkout`.
@@ -177,6 +177,6 @@ git switch feature/profile
 
 > **Tip:** Run `git status` before switching if you have uncommitted changes, so you know what work is currently in your working tree.
 
-
 ---
+
 Next: [Lab 5 — Advanced Commands](Lab5-Advanced-Commands.md)
