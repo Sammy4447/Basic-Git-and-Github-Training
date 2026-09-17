@@ -82,3 +82,20 @@ git push origin add/your-change
 ---
 
 *Want the full skill-based walkthrough? See [GitForkGuide.md](GitForkGuide.md).*
+
+
+
+
+## Useful Git Commands
+
+Check the current branch:
+
+git branch
+
+Check the status of your files:
+
+git status
+
+Push a branch to GitHub:
+
+git push origin branch-name
