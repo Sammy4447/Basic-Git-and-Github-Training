@@ -37,7 +37,7 @@ git push origin add-pr-guide
 
 ## 7. Open the Pull Request
 1. Go to your fork on GitHub — you'll see a banner: **"Compare & pull request"**. Click it.
-2. Set the base repository to the original repo (`pr4shxnt/Basic-Git-and-Github-Training`) and base branch to `main`.
+2. Set the base repository to the original repo (`Sammy4447/Basic-Git-and-Github-Training`) and base branch to `main`.
 3. Set the compare branch to `add-pr-guide` (your branch).
 4. Add a clear title and short description of what you changed and why.
 5. Click **Create pull request**.
