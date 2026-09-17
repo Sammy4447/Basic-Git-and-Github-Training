@@ -15,7 +15,7 @@
 > - `git log --stat -1` — **"what files changed in the latest commit?"** Shows the latest commit with a short file summary.
 > - `git log --oneline --decorate --graph -5` — **"what does recent history look like?"** Shows the last five commits and branch pointers in a compact graph.
 > - `git blame <file>` — **"who wrote this line and why?"** Find the author and the commit, then `git show` that commit for the reasoning. It's for context, not for blaming people.
-> - `git shortlog -sn` — **"who has contributed how much?"** A quick contributor summary for a project.
+> - `git shortlog -sn` — **"who has contributed how much?"** A quick contributor summary for a project. The SN stands for summary numbered.
 
 Terminal:
 
