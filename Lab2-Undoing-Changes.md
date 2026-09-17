@@ -12,91 +12,32 @@ Git has four different "undo" commands and picking the wrong one is how people l
 | Committed too early, want to fix the message or add a file | `git reset --soft HEAD~1` | Your changes, still staged |
 | Commit is garbage and nobody else has it | `git reset --hard HEAD~1` | Nothing — commit **and** changes are gone |
 
-> **The one rule:** `revert` is safe on shared branches, `reset` is not. `reset` rewrites history — if you've already pushed, your teammates' repos break. Reset only commits that live on your machine alone.
+> *Step 10 — Reset Soft (reset --soft)
 
-## Step 8 — Discard Unsaved Changes (restore)
+Use it when: you made a commit too early, but the changes are still correct. Maybe you forgot a file, made a typo in the commit message, or want to combine commits into one.
+Real example: you committed as "fix", then realised you forgot to include config.js. git reset --soft HEAD~1 removes the commit but keeps your changes staged, so you can add the missing file and commit everything properly.
+Only if: you have not pushed that commit yet.
 
-> **Use it when:** you were experimenting in a file, it made things worse, and you never committed it. You want the file back exactly as it was at the last commit.
-> **Careful:** those edits are not stored anywhere — once restored, they cannot be recovered. If you might want them later, use `git stash` (Step 22) instead.
+In VSCode — open hello.txt, add a line:
 
-In VSCode — open `hello.txt`, add a bad line:
-
-```
-Hello Git
-I am learning Git
-Git is a version control system
-this is a mistake
-```
-
-Save — `Ctrl + S`
-
-Terminal — discard that change:
-
-```bash
-git restore hello.txt
-```
-
-Now open `hello.txt` in VSCode — the bad line is gone ✅
-
-## Step 8.5 — Unstage a File (restore --staged)
-
-> **Use it when:** you ran `git add` on a file (it's now staged, green in `git status`) but you haven't committed yet, and you want it back to unstaged — without losing your edits.
-> **Real example:** you meant to `git add hello.txt` but typed `git add .` and staged a file you weren't ready to commit. `git restore --staged <file>` takes it out of staging; your changes are still there in the file.
-
-Terminal:
-
-```bash
-git add hello.txt
-git status                     # file shows staged (green)
-
-git restore --staged hello.txt
-git status                     # file shows unstaged (red) — edits untouched ✅
-```
-
-## Step 9 — Undo Last Commit (revert)
-
-> **Use it when:** the bad commit is **already pushed** to GitHub, or on a branch other people use. `revert` doesn't delete anything — it adds a new commit that reverses the old one, so nobody's history breaks.
-> **Real example:** you pushed a change that broke the login page. Production is down. `git revert HEAD && git push` puts it back within seconds, and the record of what happened stays in the log.
-
-In VSCode — open `hello.txt`, add a line:
-
-```
-Hello Git
-I am learning Git
-Git is a version control system
-this line should not have been committed
-```
-
-Save — `Ctrl + S`
-
-Terminal:
-
-```bash
-git add .
-git commit -m "bad commit"
-git log --oneline         # see bad commit at top
-git revert HEAD           # creates a new undo commit
-git log --oneline         # bad commit still there but neutralized
-```
-
-## Step 10 — Reset Soft (reset --soft)
-
-> **Use it when:** the commit itself was premature but the work is fine — you forgot a file, typo'd the message, or want to combine two commits into one. `--soft` deletes the commit and leaves your changes staged, ready to re-commit properly.
-> **Real example:** you commit as `"fix"`, then realise you left out `config.js`. `git reset --soft HEAD~1`, add the missing file, commit again with a proper message.
-> **Only if:** you have not pushed that commit yet.
-
-In VSCode — open `hello.txt`, add a line:
-
-```
 Hello Git
 I am learning Git
 Git is a version control system
 accidental line
-```
 
-Save — `Ctrl + S`
+
+Save — Ctrl + S
 
 Terminal:
+
+git add .
+git commit -m "temporary commit"
+git log --oneline         # see the commit at the top
+
+git reset --soft HEAD~1   # remove the commit, keep changes staged
+git status                # changes are still staged
+
+git commit -m "proper commit"
 
 ```bash
 git add .
