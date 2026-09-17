@@ -27,6 +27,18 @@ Terminal:
 git push -u origin main
 ```
 
+
+>**Use it when:** you need to overwrite the remote branch with your local branch, usually after rewriting Git history. Force push = overwrite the remote history.
+
+>**Why --force:** it tells Git to push your local branch even when the remote branch has a different history that would normally be rejected.
+
+Terminal:
+
+When force push the code
+
+```bash
+git push --force origin main
+```
 Refresh GitHub in browser — your files are live ✅
 
 ## Step 14 — Clone a Repo
