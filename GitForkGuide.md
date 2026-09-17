@@ -1,5 +1,7 @@
 # How to Create a Pull Request (PR)
 
+[← Back to index](README.md)
+
 This file walks through the full flow: fork → clone → branch → change → commit → push → open PR.
 
 ## 1. Fork the repository
@@ -15,8 +17,8 @@ cd Basic-Git-and-Github-Training
 Never work directly on `main` — always branch first.
 ```bash
 git checkout -b add-pr-guide
-example:
-git checkout -b feature/login-system
+# For a different contribution, choose a name that describes your change:
+# git checkout -b feature/login-system
 ```
 
 ## 4. Make your change
