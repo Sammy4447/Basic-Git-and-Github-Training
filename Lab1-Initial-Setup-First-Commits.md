@@ -130,32 +130,44 @@ git log
 git log --oneline
 git log --oneline --graph --all
 ```
-## About gitignore
-.gitignore is a file that tells Git which files or folders not to track or upload to GitHub.
+## Bonus — Ignore Files with .gitignore
 
-Think of it as a “Do Not Upload” list.
+> **Use it when:** your project has files that should never be committed — secrets, dependency folders, logs, build output. A `.gitignore` file tells Git which files or folders *not* to track or upload to GitHub — it's a "Do Not Upload" list.
 
-Example:
+In VSCode — right click in Explorer panel → New File → name it `.gitignore`:
+
+```
 node_modules/
 .env
 *.log
 dist/
+```
 
-Why use it ?
+Save — `Ctrl + S`
 
-🔒 Protect secrets: .env may contain API keys and passwords.
-📦 Avoid unnecessary files: node_modules/ can contain thousands of dependency files.
-🧹 Keep the repository clean: Ignore logs, build files, and temporary files.
+Terminal:
+
+```bash
+git status                          # ignored files no longer appear
+```
+
+**Why use it:**
+- **Protect secrets:** `.env` may contain API keys and passwords.
+- **Avoid unnecessary files:** `node_modules/` can contain thousands of dependency files.
+- **Keep the repository clean:** ignore logs, build files, and temporary files.
 
 Example project:
-project/
-├── index.js       ✅ tracked
-├── package.json   ✅ tracked
-├── .env           ❌ ignored
-├── node_modules/  ❌ ignored
-└── error.log      ❌ ignored
 
-Important : .gitignore only prevents untracked files from being added. It does not automatically stop tracking a file that was already committed
+```
+project/
+├── index.js       tracked
+├── package.json   tracked
+├── .env           ignored
+├── node_modules/  ignored
+└── error.log      ignored
+```
+
+> **Important:** `.gitignore` only prevents *untracked* files from being added. It does not automatically stop tracking a file that was already committed — to stop tracking an already-tracked file, run `git rm --cached <file>`.
 
 
 

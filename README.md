@@ -44,9 +44,13 @@ This training is split into 7 labs, each in its own file.
 
 Each lab README contains the exact terminal commands and VSCode actions needed to complete its steps.
 
+Need every command in one place? See the [Git & GitHub Command Cheat Sheet](CHEAT-SHEET.md).
+
 ## Contributing
 
 Found a typo or a step that doesn't work as written? Contributions are welcome — and going through the flow below is itself good practice for everything taught in these labs.
+
+> Prefer a step-by-step walkthrough? See [How to Create a Pull Request](GitForkGuide.md) first.
 
 1. **Fork** this repo (button, top right of the GitHub page).
 2. **Clone** your fork locally:

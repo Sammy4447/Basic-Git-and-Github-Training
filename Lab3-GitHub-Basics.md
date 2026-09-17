@@ -196,4 +196,4 @@ git remote -v
 Now `git push` / `git pull` will use SSH — no more username/password prompts ✅
 
 ---
-Next: [Lab 4 — Branching & Merging](Lab4-Branching-Merging.md)h
+Next: [Lab 4 — Branching & Merging](Lab4-Branching-Merging.md)
