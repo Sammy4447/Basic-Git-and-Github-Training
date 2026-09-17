@@ -68,7 +68,3 @@ Found a typo or a step that doesn't work as written? Contributions are welcome â
    git push origin fix/short-description
    ```
 6. Open a **pull request** from your branch into this repo's `main` branch, with a short description of what you changed and why.
-
-Small, focused pull requests are easier to review and merge â€” one fix or one addition per PR.
-
-Thank You !
