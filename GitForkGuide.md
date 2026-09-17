@@ -15,6 +15,8 @@ cd Basic-Git-and-Github-Training
 Never work directly on `main` — always branch first.
 ```bash
 git checkout -b add-pr-guide
+example:
+git checkout -b feature/login-system
 ```
 
 ## 4. Make your change
@@ -26,7 +28,7 @@ git diff
 
 ## 5. Stage and commit
 ```bash
-git add HOW_TO_CREATE_A_PR.md
+git add GitForkGuide.md
 git commit -m "Add guide: how to create a pull request"
 ```
 
