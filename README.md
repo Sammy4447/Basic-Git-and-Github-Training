@@ -16,7 +16,7 @@ Before starting, make sure you have:
 - **VSCode** installed, with the integrated terminal enabled
 - A **GitHub account**, and Git configured with your identity:
   ```bash
-  git config --global user.name "Your Name"
+  git config --global user.name " Siddhartha"
   git config --global user.email "you@example.com"
   ```
 - Basic comfort typing commands in a terminal (no scripting knowledge needed)
