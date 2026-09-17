@@ -1,0 +1,57 @@
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.Python
+
+# Compiled Java
+*.class
+*.jar
+*.war
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.sublime-project
+.sublime-workspace
+*.iml
+
+# Environment files
+.env
+.env.local
+.env.*.local
+venv/
+env/
+ENV/
+
+# Build and dist directories
+build/
+dist/
+*.egg-info/
+*.egg
+
+# OS specific
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Local project-specific ignores
+# (Add project-specific patterns here as needed)
