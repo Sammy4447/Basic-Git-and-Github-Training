@@ -84,5 +84,6 @@ git shortlog -sn
 > **Rule of thumb:** `status` for now, `diff` for uncommitted work, `show` / `log` / `blame` / `shortlog` for history and people. If you're about to change code, inspect first.
 
 ---
+Next: [Lab 8 — Forking & Upstream](Lab8-Fork-Upstream.md)
 
 [← Back to index](README.md)

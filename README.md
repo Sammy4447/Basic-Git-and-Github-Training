@@ -1,9 +1,9 @@
 # Git & GitHub — Complete Step by Step (VSCode + Terminal)
 
-![Last Commit](https://img.shields.io/github/last-commit/pr4shxnt/Basic-Git-and-Github-Training)
-![Repo Size](https://img.shields.io/github/repo-size/pr4shxnt/Basic-Git-and-Github-Training)
-![Issues](https://img.shields.io/github/issues/pr4shxnt/Basic-Git-and-Github-Training)
-![Stars](https://img.shields.io/github/stars/pr4shxnt/Basic-Git-and-Github-Training?style=flat)
+![Last Commit](https://img.shields.io/github/last-commit/Sammy4447/Basic-Git-and-Github-Training)
+![Repo Size](https://img.shields.io/github/repo-size/Sammy4447/Basic-Git-and-Github-Training)
+![Issues](https://img.shields.io/github/issues/Sammy4447/Basic-Git-and-Github-Training)
+![Stars](https://img.shields.io/github/stars/Sammy4447/Basic-Git-and-Github-Training?style=flat)
 ![Made with Markdown](https://img.shields.io/badge/made%20with-Markdown-1f425f.svg)
 
 A hands-on, step-by-step training for learning Git and GitHub using VSCode and the terminal side by side. No prior Git experience required — just follow the labs in order.
@@ -30,7 +30,7 @@ Before starting, make sure you have:
 
 ## Labs
 
-This training is split into 7 labs, each in its own file.
+This training is split into 9 labs, each in its own file.
 
 | Lab | Topic | File |
 |---|---|---|
@@ -41,6 +41,8 @@ This training is split into 7 labs, each in its own file.
 | Lab 5 | Advanced Commands (Steps 22–24) | [Lab5-Advanced-Commands.md](Lab5-Advanced-Commands.md) |
 | Lab 6 | Tags & Releases (Steps 25–27) | [Lab6-Tags-Releases.md](Lab6-Tags-Releases.md) |
 | Lab 7 | Inspection & Utilities (Step 28) | [Lab7-Inspection-Utilities.md](Lab7-Inspection-Utilities.md) |
+| Lab 8 | Forking & Upstream (Steps 29–31) | [Lab8-Fork-Upstream.md](Lab8-Fork-Upstream.md) |
+| Lab 9 | Pull Requests (Steps 32–36) | [Lab9-Pull-Requests.md](Lab9-Pull-Requests.md) |
 
 Each lab README contains the exact terminal commands and VSCode actions needed to complete its steps.
 
@@ -70,6 +72,8 @@ Found a typo or a step that doesn't work as written? Contributions are welcome �
 6. Open a **pull request** from your branch into this repo's `main` branch, with a short description of what you changed and why.
 
 Small, focused pull requests are easier to review and merge — one fix or one addition per PR.
+
+The full flow, with every command and the things that trip people up, is in [Lab 8 — Forking & Upstream](Lab8-Fork-Upstream.md) and [Lab 9 — Pull Requests](Lab9-Pull-Requests.md).
 
 Have Fun Learning
 
